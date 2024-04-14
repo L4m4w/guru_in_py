@@ -9,19 +9,47 @@
 import os
 from zipfile import ZipFile, ZIP_DEFLATED
 
-path = os.getcwd() + '/attachments/'
+path = os.getcwd() + '/resources/'
 
 attachments = os.listdir(path)
 
-# print(attachments)
-
-with ZipFile('small_zip.zip', mode='w', compression=ZIP_DEFLATED) as zf:
+with ZipFile(path + 'small_zip.zip','w', ZIP_DEFLATED) as zf:
     for attach in attachments:
         add_attach = os.path.join(path, attach)
-        zf.write(add_attach)
+        zf.write(add_attach, arcname=attach)
 
-with ZipFile('small_zip.zip', mode='a') as zf:
-    for file in zf.infolist():
-        print(os.path.basename(file.filename))
 
-os.remove(os.getcwd() + '/small_zip.zip')
+def archive_open():
+    with ZipFile(path + 'small_zip.zip', 'r') as zf:
+        for file in zf.infolist():
+            print(os.path.basename(file.filename))
+
+
+def test_archive():
+    b = []
+    with ZipFile(path + 'small_zip.zip', 'r') as zf:
+        for file in zf.infolist():
+            b.append((os.path.basename(file.filename)))
+            print(b)
+        assert b == attachments, 'Файлы в директории соотвествуют файлам в архиве'
+
+
+def test_csv_in_archive():
+    test_object = 'small_csv.csv'
+    with ZipFile(path + 'small_zip.zip', "r") as zf:
+
+        assert b"Hello, darling. How are you?" in zf.read(test_object)
+
+
+def test_pdf_in_archive():
+    with ZipFile(path + 'small_zip.zip', "r") as zf:
+
+        assert b"thahks" in zf.read('small_pdf.pdf')
+
+
+def test_xlsx_in_archive():
+    test_object = 'small_xlsx.xlsx'
+    with ZipFile(path + 'small_zip.zip', "r") as zf:
+
+        assert b"Me too" in zf.read(test_object)[:6]
+
