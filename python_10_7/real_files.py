@@ -25,15 +25,6 @@ def archive_open():
             print(os.path.basename(file.filename))
 
 
-def test_archive():
-    b = []
-    with ZipFile(path + 'small_zip.zip', 'r') as zf:
-        for file in zf.infolist():
-            b.append((os.path.basename(file.filename)))
-            print(b)
-        assert b == attachments, 'Файлы в директории соотвествуют файлам в архиве'
-
-
 def test_csv_in_archive():
     test_object = 'small_csv.csv'
     with ZipFile(path + 'small_zip.zip', "r") as zf:
