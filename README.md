@@ -544,3 +544,240 @@ ________
 В чем преимущества и недостатки каждого из подходов?
 
 ~~~~~~~~~~
+
+python_10_17
+~~~~~~~~~~
+17. Selenoid. Роман Орлов. Занятие в записи
+1. Практика. Добавляем контейнеризацию к задаче в Jenkins
+2. Теория. Основы Docker. Selenoid
+
+lesson // https://www.youtube.com/watch?v=wkKbPyF2akc
+
+Ссылка на репозиторий // https://github.com/qa-guru/selenoid-web-mobile-starter
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+https://github.com/fote/selenium-examples/tree/master/python
+
+Установить Docker 
+
+https://docs.docker.com/engine/install/
+
+Установить Selenoid
+
+https://aerokube.com/cm/latest/
+
+Установить Ggr
+
+https://aerokube.com/ggr/latest/
+
+Готовый образ под браузер Safari
+
+https://hub.docker.com/r/browsers/safari
+
+Готовый образ под браузер EDGE
+
+https://hub.docker.com/r/browsers/edge
+
+Готовый образ под Android для тестирования .APK
+
+https://hub.docker.com/r/selenoid/android/tags?page=1&ordering=last_updated
+
+Готовый Android образ с предустановленным Chrome x86 
+
+https://hub.docker.com/r/selenoid/chrome-mobile/tags?page=1&ordering=last_updated
+
+Статья Selenium: Back to the Moon
+
+https://blog.aerokube.com/selenium-back-to-the-moon-6ea73f1657cc
+
+Статья Selenium on Windows: Docker Revolution
+
+https://aandryashin.medium.com/selenium-on-windows-docker-revolution-f5a7eab205ad
+
+Александр Андряшин билд и Dockerfile для Windows браузеров
+
+https://github.com/aerokube/windows-images
+
+Telegram Aerocube
+
+https://t.me/aerokube
+
+Selenoid QA.GURU
+
+https://selenoid.autotests.cloud/#/
+
+Образы
+
+https://hub.docker.com/
+
+Как создаются образы
+
+https://github.com/fote/dockerfile-example/blob/main/Dockerfile
+
+Установка
+
+https://www.docker.com/products/docker-desktop
+
+Презентация Docker
+
+
+Презентация Selenium
+
+~~~~~~~~~~
+
+python_10_18
+
+~~~~~~~~~~
+18. Venv, Poetry и управление зависимостями проекта. Сергей Хомутинин. Занятие в записи
+1. Поговорим подробнее о virtualenv и requirements.txt
+2. Рассмотрим Poetry в качестве альтернативы, чем он лучше и какие задачи решает
+3. Разберем файл pyproject.toml
+
+lesson // https://www.youtube.com/watch?v=DvLUQp-h6Y0
+
+Ссылка на репозиторий // https://github.com/qa-guru/qa_guru_python_4_17
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+virtualenv // https://virtualenv.pypa.io/en/latest/index.html
+Официальные инструменты для управления зависимостями // https://github.com/pypa
+
+Poetry // https://python-poetry.org/
+
+pyproject.toml // https://peps.python.org/pep-0621/
+
+Управляем питонами // https://github.com/pyenv/pyenv
+
+Задание
+Создайте проект, используя poetry. Заполните минимальную мета-информацию в pyproject.toml
+
+В зависимостях должны быть: pytest, selene
+
+В dev-зависимостях должен быть pylint
+
+~~~~~~~~~~
+
+python_10_19
+
+~~~~~~~~~~
+19. REST API. Часть I. Александр Котляр
+1. Практика. Пишем тесты на REST API при помощи библиотеки Requests
+2. Теория. Основы HTTP протокола, типы запросов, коды ответов
+
+lesson // https://www.youtube.com/watch?v=FiT8fkkQajY
+
+Ссылка на репозиторий // https://github.com/qa-guru/qa_guru_python_10_19
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+Дополнительная информация
+
+Методы HTTP запроса  // https://developer.mozilla.org/ru/docs/Web/HTTP/Methods
+
+Коды ответа HTTP // https://developer.mozilla.org/ru/docs/Web/HTTP/Status
+
+Структура HTTP запроса // https://developer.mozilla.org/ru/docs/Web/HTTP/Messages
+
+Документация по requests // https://requests.readthedocs.io/en/latest/
+
+________
+Задание
+Написать API-тесты:
+
+1. на каждый из методов GET/POST/PUT/DELETE ручек reqres.in
+
+2. Позитивные/Негативные тесты на одну из ручек.
+
+3. На разные статус-коды 200/201/204/404/400
+
+4. На разные схемы (4-5 схем)
+
+5. С ответом и без ответа
+Дополнительно со * : 
+6. На бизнес-логику (заметить какую-то фичу и автоматизировать, как делали на уроке)
+Автотесты должны иметь говорящее название, которое будет понятно человеку не глядя в код.
+~~~~~~~~~~
+
+python_10_20
+~~~~~~~~~~
+20. REST API. Часть II. Александр Котляр
+1. Логирование шагов API в Allure
+2. Декомпозиция UI теста на API
+
+lesson // https://www.youtube.com/watch?v=PjHaHY5jFu8
+
+Ссылка на репозиторий // https://github.com/qa-guru/qa_guru_python_10_19
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+______
+
+Задание
+1. Написать несколько тестов на demoshop на добавление товаров в корзину через API с проверкой корзины через UI.
+2. Автоматизировать у себя в коде логирование в allure.
+3.* Сделать,  чтобы в allure логировался request не только json, но и text, и None, если ответ пришел не в json.
+4.* Реализовать логирование всех requests одним единым методом
+~~~~~~~~~~
+
+python_10_21
+~~~~~~~~~~
+
+21. Мобильная автоматизация #1. Разрабатываем автотесты с Browserstack. Станислав Васенков и Яков Крамаренко.
+1. Практика. Учимся пользоваться инспектором в Browserstack, разрабатываем первые автотесты на Android / iOS с Selene
+2. Практика. Browserstack-API. Забираем логи, видео
+3. Теория. Основы тестирования мобильных приложений
+
+lesson // https://www.youtube.com/watch?v=1R1lwEUsSHo
+Дополнительный материал от Якова Крамаренко. «Улучшение отчета Allure и получение записи видео из Browserstack» // https://www.youtube.com/watch?v=4G-L9nBnfFQ
+
+Исходники:
+
+- начальный код из урока https://github.com/yashaka/selene-in-action/tree/py06-lesson-mobile-1-initial
+
+- финальный код из основной части урока (без хелперов для этача видео & Co в Allure отчет) https://github.com/yashaka/selene-in-action/tree/py06-lesson-mobile-1-pre-final
+
+- финальный код из дополнительной частью урока  (с настройкой отчета Allure и этача видео & Co) https://github.com/yashaka/selene-in-action/tree/py06-lesson-mobile-1-final-with-more-allure-steps-n-attachments
+
+- финальный код из предыдущей версии этого урока для первых потоков на курсе: https://github.com/qa-guru/mobile-tests-13-py/tree/demo-selene-appium-with-browserstack-android
+
+
+Основные ссылки:
+
+- Страничка «Get Started» на браузерстек (выбирать язык Python): https://app-automate.browserstack.com/dashboard/v2/quick-start/get-started
+
+  - пример использовать не из нее, а с гитхаба по ссылке: https://github.com/browserstack/python-appium-app-browserstack/blob/master/android/browserstack_sample.py
+
+- Дешбоард на браузерстек: https://app-automate.browserstack.com/dashboard/v2
+
+- Инспектор на браузерстек: https://app-live.browserstack.com
+
+- Как загрузить свою версию апки в браузерстек:
+https://github.com/qa-guru/mobile-tests-13-py/tree/demo-selene-appium-with-browserstack-android#how-...
+
+- Откуда скачать последнюю версию апки Wikipedia под android? - https://github.com/wikimedia/apps-android-wikipedia/releases
+
+  - чтобы работал тот же тест с этой версией апки, вероятно, придется дописать дополнительную опцию (капабилити): 'appWaitActivity': 'org.wikipedia.*'
+
+- Официальные примеры Selene для запуска на разных платформах: https://github.com/yashaka/selene/tree/master/examples
+
+Конспект лекций
+
+__________
+Задание
+- Зарегистрировать аккаунт в https://browserstack.com
+
+- Запустить автотест из занятия локально
+
+- Разработать еще один автотест на открытие любой статьи(статья не будет отображена на browserstack(отображена будет ошибка), вам нужно реализовать только клик на то что вы ищите). Если хотите чтобы статью было видно, нужно залить свою апк википедии и работать с ней
+
+-* Разработать еще один автотест на iOS
+
+-* Адаптировать conftest.py для работы с двумя типами платформ - Android, iOS
+
+-* Вынести данные (логин, пароль, урл браузерстека и т.д.) в .env с pydantic
+
+- Сделать сборку в дженкинсе
+В качестве ответа на домашнее задание нужно прислать ссылку на репозиторий в гитхаб и аллюр-отчет в дженкинс
+~~~~~~~~~~
+
