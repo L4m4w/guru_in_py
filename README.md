@@ -1,10 +1,10 @@
 python_10_8
-"""
+~~~~~~~~~~
 https://www.youtube.com/watch?v=dnCooWIYbTg
 https://github.com/qa-guru/qa_guru_python_7_8
 https://github.com/qa-guru/knowledge-base
 
-~~~~~~~~~~
+
 Тестируем классы интернет-магазина
 Вам нужно реализовать и протестировать классы интернет-магазина. Все места, которые нужно дописать как в тестах, так и классах, отмечены # TODO.
 При реализации обращайте внимание на типизацию аргументов методов и возвращаемых значений. Так же обратите внимание на организацию тестов в файле с тестами:
@@ -16,11 +16,11 @@ https://github.com/qa-guru/knowledge-base
 – Почему для хранения товаров в корзине используется словарь, а не список?
 – Зачем нужен hash в классе Product? Изучите этот метод и объясните, почему он нужен.
 ~~~~~~~~~~
-"""
+
 
 python_10_9
 ~~~~~~~~~~
-"""
+
 https://www.youtube.com/watch?v=wzwMwGd3weU
 https://github.com/qa-guru/qa_guru_python_1_7
 
@@ -122,12 +122,12 @@ _____________
 4. Разметку тестов всеми аннотациями
 
 В качестве ответа на задание приложите ссылку на свой репозиторий GitHub в поле ответа
-"""
+
 ~~~~~~~~~~
 
 python_10_10
 
-"""
+~~~~~~~~~~
 Урок // https://www.youtube.com/watch?v=8iWqsZmihKk
 Репо // https://github.com/yashaka/demoqa-tests/tree/py-04-lesson-po-practice-form-task-final
 
@@ -142,7 +142,7 @@ python_10_10
 Примеры более сложных PageObject-ов для контролов и тестов с ними // https://github.com/automician/snippets/tree/master/python/python-selene-for-odoo-crm-examples/framework/model/controls
 https://github.com/automician/snippets/blob/master/python/python-selene-for-odoo-crm-examples/tests/test_examples.py
 
-~~~~~~~~~~~~~~~~
+_________________
 ровести рефакторинг своего теста на регистрацию студента по форме https://demoqa.com/automation-practice-form, используя инструменты объектно-ориентированной парадигмы для инкапсуляции деталей реализации бизнес-шагов пользователя, таким образом реализовав идеи шаблона PageObject.
 
 Задание состоит из нескольких частей, каждую из которых следует сдавать в виде отдельной ссылки на соответствующую бренчу в репозитории с тестами на приложение demoqa (все ссылки в одном сообщении в комментариях ниже).
@@ -263,11 +263,11 @@ registration_page.should_have_registered(student)
 
     * cоответственно добавить пейджобджект для LeftPanel и создать его объект в виде поля обьекта апликейшен-менеджера
  
-"""
+~~~~~~~~~~
 
 python_10_11
 
-"""
+~~~~~~~~~~
 Урок // https://www.youtube.com/watch?v=mjlrTdwQ_pY
 Репо // https://github.com/yashaka/selene-in-action/tree/py05-lesson-configuration-management-with-pydantic
 
@@ -304,13 +304,15 @@ python_10_11
 
 Библиотека для явных ожиданий (не только для веба, а например для конекшена к базе данных) // https://github.com/rockem/busypie
 
-~~~~
-"""
+~~~~~~~~~~
+
+____________
 Разбор дз // https://www.youtube.com/watch?v=sGVRpOTHKtA
 
+____________
 python_10_12
 
-"""
+~~~~~~~~~~
 Урок https://www.youtube.com/watch?v=jmHvqLD0FHA
 
 Ссылка на Jenkins  // https://jenkins.autotests.cloud/login?from=%2F
@@ -329,16 +331,19 @@ ______
 3. Cделать сборку в Jenkins
 
 В качестве ответа нужно приложить ссылку на Allure-отчет в Jenkins (с видео)
-"""
+~~~~~~~~~~
+
+__________
 
 РАЗБОР Дз по pageobject // https://www.youtube.com/watch?v=2QGnf_WlVbE
 
 Рекомендации и общепринятые договоренности в подборе имен (Python) // https://autotest.how/sdet-start-ru
 Stop Writing Classes // https://www.youtube.com/watch?v=o9pEzgHorH0
+__________
 
 python_10_13
 
-"""
+~~~~~~~~~~
 Lesson // https://www.youtube.com/watch?v=syPeao2M8TQ
 
 Ссылка на репозиторий // https://jenkins.autotests.cloud/login?from=%2Fjob%2Fteacher-iTerkin-qa_guru_python_1_9_jenkins%2F
@@ -358,11 +363,13 @@ Home task
 5. Передать из дженкинса адрес удаленного браузера
 
 6. Спрятать логин/пароль к удаленному браузеру в .env файл
-"""
+~~~~~~~~~~
+
+_________
 
 Q&A сессия к занятиям PageObjects и Configuration Management // https://www.youtube.com/watch?v=c2yaYmFlu3E
 
-"""
+~~~~~~~~~~
 – The Practical Test Pyramid // https://martinfowler.com/articles/practical-test-pyramid.html
 
 – Раздел «Classical Inheritance is Obsolete» из книги Эрика Элиотта  https://www.oreilly.com/library/view/programming-javascript-applications/9781491950289/ch03.html
@@ -374,11 +381,11 @@ Q&A сессия к занятиям PageObjects и Configuration Management // 
 
 – SDET Engineer Skills Upgrade Programm // https://docs.google.com/document/d/1yf6-uhTIM2jpHa9NfoFHAJgKucuqwkH_XhSzuwjwcQQ/edit
 
-"""
+__________
 
 python_10_14
 
-"""
+~~~~~~~~~~
 Lesson // https://www.youtube.com/watch?v=ZbpwaZJrQt8
 
 – Репозиторий с кодом // https://github.com/qa-guru/qa_guru_python_9_jenkins
@@ -396,14 +403,17 @@ ____________
 3. Зарегистрируйте бота в Telegram, создайте чат и добавьте бота в него. 
 4. Добавьте бота к вашему проекту.
 Для выполнения домашнего задания нужно приложить скриншот из телеграм-чата с нотификацией о прохождении автотестов в поле ответа.
-"""
+~~~~~~~~~~
+
+__________
 
 Дополнительное занятие. Логирование шагов и Декораторы. Яков Крамаренко // https://www.youtube.com/watch?v=DeJYgj86Nd4
 Репо // https://gist.github.com/yashaka/0cb814a5de49f4dc91a3a8528bf0d6e7
 
+__________
 python_10_15
 
-"""
+~~~~~~~~~~
 15. Учимся быстро разрабатывать готовые проекты для тестовых заданий. Васенков Станислав
 Набиваем руку небольшими проектами.
 1. Находим интересную нам вакансию (hh.ru / linkedin / @qa_jobs)
@@ -482,11 +492,11 @@ __________
 В поле ответа на задание приложите: ссылку на джобу в Jenkins, репозиторий с тестами на github, скриншот письма рекрутёру.
 
 Если вы не находитесь в поиске работы, просто сбросьте всё вышеуказанное на ревью. 
-"""
+~~~~~~~~~~
 
 python_10_16
 
-"""
+~~~~~~~~~~
 16. Pytest. Сергей Хомутинин. Занятие в записи
 1. Аргументы запуска. Собираем фикстуры, марки и другую полезную информацию для отладки
 2. Марки. Пропускаем тесты правильно
@@ -530,4 +540,4 @@ ________
 
 В чем преимущества и недостатки каждого из подходов?
 
-"""
+~~~~~~~~~~
