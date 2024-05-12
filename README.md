@@ -19,6 +19,7 @@ https://github.com/qa-guru/knowledge-base
 """
 
 python_10_9
+~~~~~~~~~~
 """
 https://www.youtube.com/watch?v=wzwMwGd3weU
 https://github.com/qa-guru/qa_guru_python_1_7
@@ -107,7 +108,7 @@ addopts =
 
 п 2.1.4. Manual installation
 
-~~~~~~~~~
+_____________
 
 Написать тест на проверку названия Issue в репозитории через Web-интерфейс.
 Этот тест представить в трех вариантах:
@@ -122,6 +123,7 @@ addopts =
 
 В качестве ответа на задание приложите ссылку на свой репозиторий GitHub в поле ответа
 """
+~~~~~~~~~~
 
 python_10_10
 
