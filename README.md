@@ -959,3 +959,207 @@ _____________
 
 
 ~~~~~~~~~~
+
+python_10_26
+~~~~~~~~~~
+25. Переезд на собственную инфраструктуру с ресурсов школы. Егор Иванов. Занятие в записи
+Настроим тестовый стенд локально. Точно также стенд настраивается на любом VPS, например в DigitalOcean.com
+1. Рассмотрим базовые команды Linux, которые понадобятся
+2. Доступ к удаленному серверу через ssh Ubuntu
+  2.1 Доступ к Ubuntu через ssh при помощи публичного RSA ключа
+3. На виртуальной машине установим:
+  3.1 Python
+  3.2 Docker
+  3.3 Docker-compose
+4. Создаем конфиг для docker-compose
+5. Поднимаем Selenoid + Selenoid UI
+  5.1 Проверяем, как это работает
+6. Поднимаем Jenkins
+  6.1 Первичные настройки Jenkins
+  6.2 Проверка работоспособности
+Задание не обязательное.
+
+lesson // https://www.youtube.com/watch?v=pW0WaCsYTG4
+
+Ссылка на репозиторий // https://github.com/cheshi-mantu/cm-jenkins-selenoid-python-testbed
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+Тестовый стенд на WSL2 (Windows) // https://github.com/cheshi-mantu/cm-local-test-bed-wsl
+Тестовый стенд внутри VirtualBox // https://github.com/cheshi-mantu/qa-local-test-bed
+
+настройка стенда на впс // https://qaguruschool.getcourse.ru/pl/fileservice/user/file/download/h/2eabd500becdd220c87b8e26de567946.pdf
+
+~~~~~~~~~~
+
+python_10_27
+~~~~~~~~~~
+Дополнительное занятие. Стабильные тесты на чистом Selenium Webdriver c помощью явных ожиданий. Яков Крамаренко. Запись
+
+lesson // https://www.youtube.com/watch?v=SmELu4tkw1E
+
+reposit link // https://github.com/qa-guru/selenium-webdriver-wrapper
+
+________
+
+Задание
+#0
+Повторить код из урока, возможно коректируя селекторы (можно выбрать более удобный для себя поисковый движок, типа ecosia.org, duckduckgo.com, и т.д.). Можно подобрать свое имя для фреймворка. Потом выберем лучшее имя 😉
+Сохранить проект в гит-репозитории в отдельной бренче refactoring-selenium-stage-0
+
+
+#1
+Отрефакторить рабочий код от версии
+
+driver.get('https://ecosia.org')
+query='[name=q]'
+wait.until(type(query, value='selene' + Keys.ENTER))
+driver.back()
+wait.until(type(query, value=' yashaka' + Keys.ENTER))
+wait.until(click('[data-test-id=mainline-result-web]:nth-of-type(1) a'))
+wait.until(number_of_elements('[id^=issue_]:not([id$=_link])', value=4))
+driver.quit()
+до версии
+
+driver.get('https://ecosia.org')
+query='[name=q]'
+type(query, value='selene' + Keys.ENTER)
+driver.back()
+type(query, value=' yashaka' + Keys.ENTER)
+click('[data-test-id=mainline-result-web]:nth-of-type(1) a')
+assert_that(number_of_elements('[id^=issue_]:not([id$=_link])', value=4)
+driver.quit()
+и сохранить результат в git-репозитории в отдельной бренче c именем: refactoring-selenium-stage-1
+
+#2
+Далее отрефакторить к версии:
+
+from seleyasha import browser
+# where browser is seleyasha/browser.py
+browser.open('https://ecosia.org')
+query='[name=q]'
+browser.type(query, value='selene' + Keys.ENTER)
+browser.back()
+browser.type(query, value=' yashaka' + Keys.ENTER)
+browser.click('[data-test-id=mainline-result-web]:nth-of-type(1) a')
+browser.assert_that(number_of_elements('[id^=issue_]:not([id$=_link])', value=4)
+browser.quit()
+и сохранить результат в git-репозитории в отдельной бренче c именем: refactoring-selenium-stage-2
+
+#3
+Далее отрефакторить к версии:
+
+from seleyasha.browser import Browser
+# where browser is seleyasha/browser.py
+browser = Browser(driver)
+browser.open('https://ecosia.org')
+query='[name=q]'
+browser.type(query, value='selene' + Keys.ENTER)
+browser.back()
+browser.type(query, value=' yashaka' + Keys.ENTER)
+browser.click('[data-test-id=mainline-result-web]:nth-of-type(1) a')
+browser.assert_that(number_of_elements('[id^=issue_]:not([id$=_link])', value=4)
+browser.quit()
+и сохранить результат в git-репозитории в отдельной бренче c именем: refactoring-selenium-stage-3
+
+
+Как решение заданий – прислать 4 ссылки на соответствующие бренчи.
+
+~~~~~~~~~~
+
+python_10_28
+~~~~~~~~~~
+Дополнительное занятие. Фреймворк на Selenium Webdriver – лучшие встроенные ожидания и ленивые элементы. Яков Крамаренко. Запись
+lesson // https://www.youtube.com/watch?v=WEZ3IHZ9yzI
+
+#0 Исходный код – «Чистый вебдрайвер с явными ожиданиями до кастомных команд и условий для проверок» // https://github.com/qa-guru/selenium-webdriver-wrapper/tree/refactoring-selenium-stage-0-explicit-waits-for-custom-commands-n-conditions
+
+#1 Рефакторинг –  «Высокоуровневые ждущие команды и проверки» // https://github.com/qa-guru/selenium-webdriver-wrapper/tree/refactoring-selenium-stage-1-built-in-waits-with-improved-errors
+
+#2 Рефакторинг – «Высокоуровневый API для браузера с помощью инструментов Модульной Парадигмы» // https://github.com/qa-guru/selenium-webdriver-wrapper/tree/refactoring-selenium-stage-2-browser-api-modular-style
+
+#3 Рефакторинг – «Высокоуровневый API для браузера с помощью ООП» // https://github.com/qa-guru/selenium-webdriver-wrapper/tree/refactoring-selenium-stage-3-browser-api-oop-style
+
+#4 Рефакторинг – «Конфиг для браузера и еще больше ООП для флуэнт стиля ленивых элементов для шаблона PageObject» // https://github.com/qa-guru/selenium-webdriver-wrapper/tree/refactoring-selenium-stage-3-browser-api-oop-style
+
+____________
+Задание
+Повторить код из урока.
+
+
+
+#4.1 ... получив сначала версию (cохраненную в бренче refactoring-selenium-stage-4-1) вида:
+
+from seleyasha.browser import Browser
+# where browser is seleyasha/browser.py
+browser = Browser(driver, Config(timeout=4.0, base_url='https://ecosia.org'))
+browser.open('/')
+query=browser.element('[name=q]')
+query.type('selene').press_enter()
+browser.back()
+query.type(' github issues').press_enter()
+browser.element('[data-test-id=mainline-result-web]:nth-of-type(1) a').click()
+'''
+# при этом старая версия API все еще должна работать:
+
+browser.click('[data-test-id=mainline-result-web]:nth-of-type(1) a')
+'''
+browser.all('[id^=issue_]:not([id$=_link])').assert_amount(25)
+browser.quit()
+
+
+#4.2 ... потом получив версию (cохраненную в бренче refactoring-selenium-stage-4-2) вида:
+
+from tests.model import web
+
+web.ecosia.open()
+web.ecosia.query.type('selene').press_enter()
+browser.back()
+web.ecosia.query.type(' github issues').press_enter()
+web.ecosia.first_result_link.click()
+web.github_issues.links.assert_amount(25)
+browser.quit()
+#4.3 Далее убери «старую» версию API вида browser.command(selector, *value)
+
+Реализация всех команд и проверок над элементом и коллекцией элементов – должны быть перенесены в соответствующие классы Element и Collection. 
+
+То есть, из двух стилей API:
+
+browser.element('[data-test-id=mainline-result-web]:nth-of-type(1) a').click()
+# OR
+browser.click('[data-test-id=mainline-result-web]:nth-of-type(1) a')
+– должен остаться только первый 😉
+
+Сохрани решение в отдельной бренче с именем refactoring-selenium-stage-4-3
+
+#4.4 Расширь набор команд для Element, Collection, Browser, Config
+
+Написать тест на страницу https://the-internet.herokuapp.com/hovers проверяющий появление подписи по наведению мышки на аватарку и соответственно ее исчезновение при наведении на следующую. Важное условие и ключевая подсказка – полноценный тест должен проверять одновременно коллекцию всех подсказок под всеми тремя аватарками (то есть нужны проверки именно над коллекцией элементов а не одним элементом). 
+
+Написать тест на страницу https://the-internet.herokuapp.com/context_menu проверяющий срабатывание правого клика мыши по соответствующей области.
+
+Добавить в Config опцию quit_browser_on_exit управляющую автоматическим закрытием браузера по завершению работы python процесса. По умолчанию опция должна быть «отключена». Далее - удали из тестов browser.quit() и в настройке браузера – «включи» соответствующую опцию. Подсказка: используй функцию register из стандартного python-модуля atexit для «регистрации» во время инициализации браузера – вызова соответствующего метода для закрытия.
+
+Сохрани решение в отдельной бренче с именем refactoring-selenium-stage-4-4
+~~~~~~~~~~
+
+Дополнительное занятие. Разбор вопросов на интервью по Selenium WebDriver. Яков Крамаренко. Запись
+~~~~~~~~~~
+О Selenium, его локаторах, вейтах и execute_script // https://www.loom.com/share/af46c0e8d35f4bfab0783b30a56d4ee8
+
+is_element_present и работа с динамическими таблицами в Selenium + Python // https://www.loom.com/share/774416dc80a94b6aa4cab80a2e6287a9
+
+Selenium Grid, варианты click и send_keys в Selenium // https://www.loom.com/share/c93fc3a8bd274ee397ad6dd51af6f419
+
+Что такое Appium + немного о Grid // https://www.loom.com/share/562ca1289539479398db8d853a6f8a4e
+
+~~~~~~~~~~
+
+Дополнительное занятие. Разрабатываем автотесты с Python/Pytest/Playwright. Иван Тебеньков
+~~~~~~~~~~
+lesson // https://www.youtube.com/watch?v=A4bfFwbOVtU
+
+
+– https://playwright.dev/python/
+– Andrey Lushnikov — Playwright: Web testing without drama // https://www.youtube.com/watch?v=ttODF00XWis
+~~~~~~~~~~
