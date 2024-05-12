@@ -381,7 +381,10 @@ Q&A сессия к занятиям PageObjects и Configuration Management // 
 
 – SDET Engineer Skills Upgrade Programm // https://docs.google.com/document/d/1yf6-uhTIM2jpHa9NfoFHAJgKucuqwkH_XhSzuwjwcQQ/edit
 
+~~~~~~~~~~
 __________
+
+
 
 python_10_14
 
