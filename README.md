@@ -317,4 +317,214 @@ python_10_12
 Ссылка на Jenkins demoqa // https://jenkins.autotests.cloud/login?from=%2Fjob%2Fteacher-iTerkin-qa_guru_python_9_jenkins_demoqa
 
 Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+______
+
+ДЗ
+1. Взять свой код для http://demoqa.com/automation-practice-form
+2. Добавить аттачи для Allure – скриншот, page source, console.log и видео
+3. Cделать сборку в Jenkins
+
+В качестве ответа нужно приложить ссылку на Allure-отчет в Jenkins (с видео)
+"""
+
+РАЗБОР Дз по pageobject // https://www.youtube.com/watch?v=2QGnf_WlVbE
+
+Рекомендации и общепринятые договоренности в подборе имен (Python) // https://autotest.how/sdet-start-ru
+Stop Writing Classes // https://www.youtube.com/watch?v=o9pEzgHorH0
+
+python_10_13
+
+"""
+Lesson // https://www.youtube.com/watch?v=syPeao2M8TQ
+
+Ссылка на репозиторий // https://jenkins.autotests.cloud/login?from=%2Fjob%2Fteacher-iTerkin-qa_guru_python_1_9_jenkins%2F
+Ссылка на jenkins // https://github.com/qa-guru/qa_guru_python_1_9_jenkins/
+
+___________
+
+Home task
+1. Доработать свой код на регистрационную форму с аллюровскими степами
+
+2. Доработать код, чтобы он запускался не локально, а браузер в selenoid.autotests.cloud
+
+3. Добавить аттачменты - скриншот, логи консоли, page source, видео
+
+4. Сделать сборку в jenkins.autotests.cloud (регистрация открыта) с кодом
+
+5. Передать из дженкинса адрес удаленного браузера
+
+6. Спрятать логин/пароль к удаленному браузеру в .env файл
+"""
+
+Q&A сессия к занятиям PageObjects и Configuration Management // https://www.youtube.com/watch?v=c2yaYmFlu3E
+
+"""
+– The Practical Test Pyramid // https://martinfowler.com/articles/practical-test-pyramid.html
+
+– Раздел «Classical Inheritance is Obsolete» из книги Эрика Элиотта  https://www.oreilly.com/library/view/programming-javascript-applications/9781491950289/ch03.html
+– Доклад Эрика Элиотта  // https://vimeo.com/69255635
+
+Цитаты: «Inheritance hierarchies are trouble: inflexible, tightly coupled (child HAS TO KNOW IMPL of parent class), non-natural», «e.g. you have Tools and Weapons that you designed for war context. Maybe you can reuse them for "tactical training" but you probably can't build a "Clue board game" with them ;)»
+
+– Статья о Why you should not use SetUp and TearDown // https://jamesnewkirk.typepad.com/posts/2007/09/why-you-should-.html
+
+– SDET Engineer Skills Upgrade Programm // https://docs.google.com/document/d/1yf6-uhTIM2jpHa9NfoFHAJgKucuqwkH_XhSzuwjwcQQ/edit
+
+"""
+
+python_10_14
+
+"""
+Lesson // https://www.youtube.com/watch?v=ZbpwaZJrQt8
+
+– Репозиторий с кодом // https://github.com/qa-guru/qa_guru_python_9_jenkins
+– https://jenkins.autotests.cloud/job/teacher-iTerkin-qa_guru_python_9_jenkins_notifications/2/allure/
+– https://jenkins.autotests.cloud/job/teacher-iTerkin-qa_guru_python_9_jenkins_notifications_positive
+
+Бот с уведомлениями // https://github.com/qa-guru/allure-notifications
+Wiki // https://github.com/qa-guru/allure-notifications/wiki
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+____________
+
+Задание
+1. Создайте проект с любыми автотестами, либо возьмите уже созданный.
+2. Создайте задачу в Jenkins.
+3. Зарегистрируйте бота в Telegram, создайте чат и добавьте бота в него. 
+4. Добавьте бота к вашему проекту.
+Для выполнения домашнего задания нужно приложить скриншот из телеграм-чата с нотификацией о прохождении автотестов в поле ответа.
+"""
+
+Дополнительное занятие. Логирование шагов и Декораторы. Яков Крамаренко // https://www.youtube.com/watch?v=DeJYgj86Nd4
+Репо // https://gist.github.com/yashaka/0cb814a5de49f4dc91a3a8528bf0d6e7
+
+python_10_15
+
+"""
+15. Учимся быстро разрабатывать готовые проекты для тестовых заданий. Васенков Станислав
+Набиваем руку небольшими проектами.
+1. Находим интересную нам вакансию (hh.ru / linkedin / @qa_jobs)
+2. Делаем небольшой проект:
+– разрабатываем 5-10 простых автотестов на сайт из вакансии,
+  – создаем задачу в Jenkins,
+– прячем секретные данные (должны быть вынесены в отдельный файл / конфиг сборки в Jenkis)
+– настраиваем Allure-отчет, добавляем вложения:
+– снимки экрана,
+– логи браузера,
+– видеозапись теста,
+– тест-план Allure TestOps - с ручными и автоматизированными тестами
+– интеграцию с Jira
+– настраиваем нотификацию в Telegram / Slack.
+
+По мере прохождения курса добавим сюда:
+– автотесты на API
+3. Отправляем наш проект HR c сопроводительным письмом
+
+Lesson // https://www.youtube.com/watch?v=tF0K813nH6I
+
+Ссылка на репозиторий // https://jenkins.autotests.cloud/login?from=%2Fjob%2Fteacher-iTerkin-qa_guru_python_8_full_project%2F
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+Доступы к сервисам
+
+https://jira.autotests.cloud/
+jira8 jira8
+https://allure.autotests.cloud
+allure8 allure8
+
+
+
+
+Полезные ссылки: 
+
+– https://jenkins.autotests.cloud/job/teacher-iTerkin-qa_guru_python_10_jenkins_full_project/
+– https://allure.autotests.cloud/launch/36279
+– https://jira.autotests.cloud/browse/HOMEWORK-1139
+
+
+Оформляем README.md
+Необходимо посмотреть дополнительное занятие - Дополнительное занятие. Станислав Васенков. «GitHub. Readme / Markdown»
+
+
+Обязательно должны быть:
+- Команды запуска тестов из терминала с пояснением ключей
+- История со скриншотами - где что происходит, запускается
+- Гифка с тестом (из видео в selenoid)
+- Иконки используемого стека для красоты
+
+Дополнительное занятие. Даниил Шатухин. «Оформляем README профиля на GitHub» // https://www.youtube.com/watch?v=r52XllO_3TQ
+
+Дополнительное занятие. Даниил Шатухин. «Рисуем диаграммы с помощью Mermaid.js и Markdown» // https://www.youtube.com/watch?v=uJuskThFWW8
+
+__________
+
+Задание
+1. Выберите вакансию 
+
+2. Напишите на неё автотестов:
+
+- 5-10 простых. Главное – не тратьте на это много времени!
+
+- Тесты должны проверять основную логику приложения (регистрация, аутентификация, поиск, добавление/удаление товара из корзины, оформление заказа и др.)
+
+- Использование параметризованных тестов не запрещается, но вся работа НЕ должна состоять из одного большого теста с параметрами (в случае, если тесты могут быть объединены в один параметризованный тест, то все подходящие тесты будут засчитываться как один).
+
+3. Сделайте джобу в Jenkins, добавьте Allure отчёт, уведомления в чат Telegram, Selenoid.
+
+4. Оформите всё со скриншотами в readme.md
+
+
+
+В поле ответа на задание приложите: ссылку на джобу в Jenkins, репозиторий с тестами на github, скриншот письма рекрутёру.
+
+Если вы не находитесь в поиске работы, просто сбросьте всё вышеуказанное на ревью. 
+"""
+
+python_10_16
+
+"""
+16. Pytest. Сергей Хомутинин. Занятие в записи
+1. Аргументы запуска. Собираем фикстуры, марки и другую полезную информацию для отладки
+2. Марки. Пропускаем тесты правильно
+3. Параметризация. На тесте, на фикстуре. Переопределение параметров
+
+Lesson // https://www.youtube.com/watch?v=g9y0nh2IpeM
+
+Ссылка на репозиторий // https://github.com/qa-guru/qa_guru_python_5_15
+
+How to parametrize fixtures and test functions // https://docs.pytest.org/en/7.1.x/how-to/parametrize.html
+
+Запись с занятия. Часть II // https://www.youtube.com/watch?v=RHO9FGOxWOg
+
+Ссылка на репозиторий // https://github.com/qa-guru/qa_guru_python_5_15_p2
+
+Полезные ссылки
+https://github.com/pytest-dev/pytest/issues/3261#issuecomment-369740536
+https://pytest-xdist.readthedocs.io/en/latest/how-to.html
+
+Решение проблемы с session-scope фикстурами при параллельном тестировании // https://pytest-xdist.readthedocs.io/en/latest/how-to.html#making-session-scoped-fixtures-execute-only-once
+
+Хуки в документации  // https://docs.pytest.org/en/7.2.x/reference/reference.html#hooks
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+________
+Задание
+- Реализовать автотест для github.com, который заходит на страницу, ищет кнопку Sign In, и нажимает на нее (авторизоваться не нужно);
+
+- Параметризовать тест различным размером окна браузера;
+
+- Обратите внимание, что для мобильной версии сайта потребуется другой автотест из-за изменения структуры локаторов;
+
+- Сделайте два варианта пропуска неподходящих параметров и тестов.
+
+1. Пропустите мобильный тест, если соотношение сторон десктопное (и наоборот);
+
+2. Переопределите параметр с помощью indirect;
+
+3. Сделайте разные фикстуры для каждого теста.
+
+В чем преимущества и недостатки каждого из подходов?
+
 """
