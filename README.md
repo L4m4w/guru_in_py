@@ -781,3 +781,181 @@ __________
 В качестве ответа на домашнее задание нужно прислать ссылку на репозиторий в гитхаб и аллюр-отчет в дженкинс
 ~~~~~~~~~~
 
+python_10_22
+
+~~~~~~~~~~
+22. Мобильная автоматизация #2. Разрабатываем автотесты с эмулятором Android-устройства и на своем телефоне. Занятие в записи
+1. Настраиваем рабочее место:
+– Устанавливаем Android Studio
+– Устанавливаем Appium Server, Appium Inspector
+– Настраиваем переменные среды
+2. Эмулируем Android устройство
+3. Подключаем свой телефон
+4. Практика. Разрабатываем автотесты с Appium
+5. Теория. Основы Appium
+
+lesson // https://www.youtube.com/watch?v=JdjL6h3NpLA
+
+Конспект инструкций по настройке системы и устройств для локального запуска мобильных тестов на платформе Android // file:///Users/evgeniy.l/Downloads/appium-setup-for-local-android-tutorial-md.html
+
+Исходники:
+
+
+- начальный код из урока https://github.com/yashaka/selene-in-action/tree/py06-lesson-mobile-2-initial
+
+- финальный код из основной части урока https://github.com/yashaka/selene-in-action/tree/py06-lesson-mobile-2-final
+
+
+Дополнительно ⬇️
+
+Пример реализации более сложной логики для этачей в Аллюр репорт, когда мы не всегда этачим скриншоты, например, а только в случае, если тест упал, чтобы сэкономить место, например: https://www.loom.com/share/d3ca893054be4566a28a2b3f8912408d
+
+Доклад Игоря Балагурова о кросс-платформенных тестах – 
+
+«Don’t repeat yourself: UI-тесты для веб, iOS и Android одновременно» https://www.youtube.com/watch?v=YoMt08OcxMI
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+__________
+Задание
+1. Настроить систему для работы с устройствами на Android – реальными + эмуляторами (инструкция).
+2. Разработать отдельный тест на getting started (onboarding screen) в приложении википедии - пройти по 4м экранам, на каждом сделать проверку
+3. Добавить в config опцию context, по значению которой остальные опции конфига будут загружаться (используя библиотеку python-dotenv) из нужного файла типа .env.context. По итогу должно быть минимум три .env-файла, например: .env.local_emulator, .env.local_real, .env.bstack
+4. * Если это не было сделано ранее – именно bstack_userName и bstack_accessKey считывать не из .env.bstack, а из .env.credentials или .env (соответстенно именно эти файлы должны быть в .gitignore)
+5. * Если это не было сделано ранее – отрефакторить реализацию config.py на использование pydantic
+
+~~~~~~~~~~
+
+__________
+Разбор домашних заданий по блоку REST API. Александр Котляр. Запись // https://www.youtube.com/watch?v=_83TGidrNIo
+__________
+
+python_10_23
+~~~~~~~~~~
+23. Allure TestOps. Артем Ерошенко. Занятие в записи
+1. Знакомство с системой
+2. Заведение тест-кейсов
+3. Создание первого тест-плана
+________________________________
+1. Интеграции с Jenkins и Jira
+2. Объединение ручных тестов и автотестов в единый тест-план
+3. Метрики, графики, углубленное изучение платформы
+4. Администрирование
+5. Обзор решений и внедренных проектов
+
+lesson // https://www.youtube.com/watch?v=uvK8ayyI_5s
+
+Ссылка на репозиторий // https://github.com/eroshenkoam/allure-pytest-example
+
+Доступ к сервису https://allure.autotests.cloud
+allure8 allure8
+
+Доступ к сервису https://jira.autotests.cloud/
+jira8 jira8
+
+Конспект лекций // https://github.com/qa-guru/knowledge-base
+
+Доклад от Артема Ерошенко // https://www.youtube.com/watch?v=Q9Q-JhgogTM
+
+__________
+
+Задание
+1. Сделать репозиторий Allure Examples
+
+2. На основе него сгенерировать тестовую документацию
+
+3. Настроить запуск из Allure
+
+4*. Найти баг в Allure (ошибка в самом сервисе)
+
+~~~~~~~~~~
+
+python_10_25
+~~~~~~~~~~
+24. Дипломный проект
+1. Подводим итоги по обучению 
+2. Получаем задание на диплом - проект c (manual + auto) тестами - Web, Mobile, Api
+
+lesson // https://www.youtube.com/watch?v=31o04zCrfrA
+
+Подключение Allure TestOps и Jira
+
+Доступы к сервисам 
+
+https://jira.autotests.cloud jira8 jira8 
+
+https://allure.autotests.cloud allure8 allure8
+
+
+
+Дипломные работы выпускников прошлых потоков:
+
+– https://github.com/tamayotas/litres-project
+– https://github.com/AlexD120/Litres_shop
+– https://github.com/Y3ll0wman/Ivi_UI_and_mobile_test_framework
+– https://github.com/Y3ll0wman/Petstore_api_test_framework
+– https://github.com/flowerfrog/litres_test_project
+
+– https://github.com/ponomarev-iv1986
+– https://github.com/A-d-am/qa_guru_diploma
+– https://github.com/elakovnick24
+
+– https://github.com/elakovnick24/demo-autotest-project-for-vivid
+
+– https://github.com/elakovnick24/demo-spring-boot-api-test
+
+– https://github.com/StanislavDZ
+
+– https://github.com/StanislavDZ/DprojectAPI
+
+Инструкция по проверке дипломов // https://rainbow-spleen-3c9.notion.site/QA-GURU-PYTHON-ff276648b76a4e6b8bb538051ddf6fb4
+_____________
+Задание
+Дипломный проект состоит из 4-х блоков:
+
+
+
+1. Большой проект с UI-автотестами
+
+Обязательно должно быть:
+
+- PageObjects
+
+
+
+2. Красиво сделаный проект по API с Readme
+
+Обязательно должно быть:
+
+- Модели, как для формирования body в post-запросе, так и для десериализации ответа
+
+- Авторизация (или подготовка данных/сущностей) по Api для UI проекта (в идеале если получится добавить API-тестов в п.1)
+
+
+
+3. Красиво сделаный проект по Mobile с Readme;
+
+
+
+4. В Allure Testops необходимо также добавить немного ручных тестов;
+
+
+
+5. Обновить профиль в гитхабе, в нем можно указать ссылки на все 3-4 проекта
+
+
+
+В идеале, если получится объединить 1-4 пункты в рамках одного продукта
+
+Также рекомендуем аналогично доработать CV (резюме) и профили на сайтах поиска работы - linkedin.com, hh.ru и т.п.
+
+
+
+В помощь занятие по Github Markdown #1 (шпаргалка // https://github.com/qa-guru/knowledge-base/wiki/Github-README.md) и Github Markdown #2 
+
+
+
+Срок сдачи диплома и всех "хвостов" по домашним работам – до 15.05.2024 г. включительно
+
+
+~~~~~~~~~~
