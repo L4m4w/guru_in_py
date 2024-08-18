@@ -43,7 +43,7 @@ def test_full_form_fill():
     browser.element("//div[@aria-label='Choose Tuesday, April 16th, 2024']").perform(command.js.click)
     browser.element('#subjectsInput').send_keys('English').press_tab()
     browser.element('#hobbies-checkbox-1').perform(command.js.click)
-    browser.element('#uploadPicture').send_keys("/Users/evgeniy.l/Documents/Projects/My/QA-guru/python_10_5/img-1.png")
+    browser.element('#uploadPicture').send_keys("/Users/evgeniy.l/Documents/Projects/My/guru_in_py/python_10_5/img-1.png")
     browser.element('#currentAddress').type('Lenins street')
     browser.element('#react-select-3-input').send_keys('NCR').press_tab()
     browser.element('#react-select-4-input').send_keys('Delhi').press_tab()

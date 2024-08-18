@@ -13,3 +13,31 @@
 
 – Зачем нужен hash в классе Product? Изучите этот метод и объясните, почему он нужен.
 """
+
+
+class Point:
+    dot = []
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        Point.dot = self.x, self.y
+
+    def move(self, xx, yy):
+        self.x += xx
+        self.y += yy
+        print(Point.dot)
+        return [self.x, self.y]
+
+    def length(self, dot):
+        pass
+
+point = Point(3, 5)
+print(point.x, point.y)
+point.move(2, -3)
+print(point.x, point.y)
+
+first_point = Point(2, 7)
+second_point = Point(7, 9)
+print(first_point.length(second_point))
+print(second_point.length(first_point))
+

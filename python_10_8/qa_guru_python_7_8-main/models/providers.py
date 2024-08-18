@@ -1,6 +1,6 @@
 import csv
 
-from models.users import User, Status
+from .users import User, Status
 
 
 class UserProvider:

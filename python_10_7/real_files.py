@@ -9,6 +9,7 @@
 import os
 from zipfile import ZipFile, ZIP_DEFLATED
 
+
 path = os.getcwd() + '/resources/'
 
 attachments = os.listdir(path)
